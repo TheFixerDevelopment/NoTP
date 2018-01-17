@@ -51,13 +51,13 @@ class Main extends PluginBase implements Listener {
             foreach ($this->enabled as $notpuser) {
 
                 if ((strpos(strtolower($notpuser), strtolower($args[1])) !== false) && (strtolower($notpuser) !== strtolower($sender->getName()))) {
-                    $sender->sendMessage(TextFormat::RED . "This Player Is Not Accepting TP");
+                    $sender->sendMessage(TextFormat::RED . "§5This Player Is Not Accepting TP");
                     $event->setCancelled(true);
                     return;
                 }
 
                 if (isset($args[2]) && strpos(strtolower($notpuser), strtolower($args[2])) !== false && (strtolower($notpuser) !== strtolower($sender->getName()))) {
-                    $sender->sendMessage(TextFormat::RED . "This Player Is Not Accepting TP");
+                    $sender->sendMessage(TextFormat::RED . "§5This Player Is Not Accepting TP");
                     $event->setCancelled(true);
                     return;
                 }
